@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们在一起多久啦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .box {
+            background: rgba(255,255,255,0.2);
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .time {
+            font-size: 22px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>我们在一起</h1>
+        <div class="time" id="timeShow"></div>
+    </div>
+
+    <script>
+        // ========== 修改这里的日期为你们的纪念日 ==========
+        const startDate = new Date("2025-10-22 00:00:00");
+        // ==============================================
+
+        function updateTime() {
+            const now = new Date();
+            const diff = now - startDate;
+
+            const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minute = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const second = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("timeShow").innerHTML = 
+                `${day} 天 ${hour} 小时 ${minute} 分钟 ${second} 秒`;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
