@@ -62,3 +62,24 @@ body {
       border-radius: 14px;
       border: 1px dashed #e0c2c1;
     }
+
+    .card img {
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .card a {
+      color: #3b6fb2;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .card a:hover,
+    .card a:focus {
+      color: #1f4d8a;
+      text-decoration: underline;
+      transform: translateX(2px);
+    }
