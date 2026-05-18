@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>纪念日记录卡片</title>
+  <title>纪念卡</title>
   <link rel="stylesheet" href="CSS/index.css">
+  <style>
+    .card img {
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>纪念日记录卡片</h1>
+    <h1>纪念卡</h1>
     <p>每天记录一个小瞬间，留住每一个值得纪念的日子。</p>
   </header>
   <main class="container">
     <div class="card-grid">
-      <article class="card">
+      <!-- <article class="card">
         <h2>每天一张卡片</h2>
         <div class="date">2026-05-18</div>
         <p>今天是一张新的开始。用卡片记录每一天的小确幸，让时间的印记更清晰。</p>
@@ -27,10 +37,26 @@
         <h2>心情笔记</h2>
         <div class="date">2026-05-16</div>
         <p>日常的点滴就是最真实的纪念。用文字记录，用心感受。</p>
+      </article> -->
+      <article class="card">
+        <div class="date">2026-1-30</div>
+        <p>我去漳州找XYY啦</p>
+        <p> </p>
+        <p>看到xyy了, 然后偷偷摸到她旁边啦</p>
+        <img src="./Anniversary/2026-01-30/12.13.jpg" alt="图片">
+        
+      </article>
+      <article class="card">
+        <div class="date">2025-10-26</div>
+        <p>我们又一起偷偷出来啦</p>
+      </article>
+      <article class="card">
+        <div class="date">2025-10-23</div>
+        <p>xxy我们在一起啦</p>
       </article>
     </div>
     <div class="empty">
-      这是你的纪念日卡片页面。继续添加更多记录，让每一天都有故事。
+      继续记录，让每一天都有故事。
     </div>
   </main>
 </body>
